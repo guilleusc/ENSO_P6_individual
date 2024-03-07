@@ -1,32 +1,45 @@
 ##### Comandos relacionados con git #####
-git init
-git add .
-git commit -m "Primeira confirmación: preparación práctica"
-git log
-git tag -a R1 -m "Estado inicial"
-git branch Mejoras 
-git switch Mejoras
-git branch
-git add .
-git commit -m "Engadir arquivo de propostas na rama Mejoras; Modificar el documento word"
-git switch master
-git branch
-git merge Mejoras
-git branch -d Mejoras
-git add . 
-git commit -m "Borrar documento pdf cas propostas de mellora"
-git tag -a R2 -m "Versión coa rama Mejoras fusionada e pdf eliminado"
-git log
-git revert HEAD 
-git add .
-git commit -m "Volver a actualizar de versión 2 a 3 e meter plantillas actualizadas"
-git add historia.txt
-git commit -m "Actualizar no repositorio o arquivo historia.txt"
-git tag -a R3 -m "Versión cos documentos coa última versión"
-git remote add origin http://github.com/guilleusc/ENSO_P6_individual.git
-git push --tags origin master
+git init # Crear un repositorio sobre a xerarquía de directorios que se indica no enunciado
+git add . # Logo de incorporar os arquivos que se mandan, actualízase a Staging Area (SA) con toda a xerarquía
+git commit -m "Primeira confirmación: preparación práctica" # Confírmanse os cambios detectados nos arquivos da SA, actualizando o repositorio local
+git log # Comprobamos que efectivamente se realizou a confirmación e queda rexistrada
+git tag -a R1 -m "Estado inicial" # Etiquetamos o estado do repositorio 
+git branch Mejoras # Creamos a rama "Mejoras" 
+git switch Mejoras # Situámonos na rama "Mejoras"
+git branch # Comprobamos que efectivamente estamos na rama "Mejoras"
+git add . # Logo de incuir o ficheiro pdf indicado e actualizar o documento existente á versión 2, entón enviamos ao SA toda a xerarquía (realmente poderiamos enviar directorios concretos onde se fixeron os cambios, pero para o caso non ten relevancia xa que cando se faga commit xa solo se van a actualizar os cambios que se detecten).
+git commit -m "Engadir arquivo de propostas na rama Mejoras; Modificar el documento word" # Confirmación do cambio, actualízase o repositorio local
+git switch master # Situámonos na rama "master" principal
+git branch # comprobamos que nos situamos en dita rama
+git merge Mejoras # fusionamos a rama de "Mejoras" coa principal "master", mantendo conservando a historia sin reescribila
+git branch -d Mejoras # borramos a rama "Mejoras"
+git add . # Engadimos a xerarquía á SA (logo de borrar o documento pdf)
+git commit -m "Borrar documento pdf coas propostas de mellora" # Confirmamos e actualizamos o repositoro local cos cambios
+git tag -a R2 -m "Versión coa rama Mejoras fusionada e pdf eliminado" # Etiquetamos este estado do repositorio como R2
+git add .  # Engadimos a xerarquía á SA (logo de cambiar a versión 2 pola 3 na rama principal)
+git commit -m "Cambiado versión 2 pola versión 3" # Confirmamos ese cambio, actualizando o repositorio local
+git log # Revisamos as confirmacións (os commits) realizados ata o momento
+git revert HEAD # Este comando permite regresar a un estado anterior da rama, simplemente usando un novo commit que desfai os cambios do último commit realizado. Non se modifica o historial existente desta forma
+git add . # Logo de volver a cambiar a versión 2 pola 3 e meter as plantillas xa actualizadas, enviamos a xerarquía enteira a SA
+git commit -m "Volver a actualizar de versión 2 a 3 e meter plantillas actualizadas" # Confirmamos os cambios, actualizando o repositorio local
+git add historia.txt # Pasamos este arquivo ao SA
+git commit -m "Actualizar no repositorio o arquivo historia.txt" # Actualizamos o repositorio local para ter este arquivo actualizado en Github 
+git tag -a R3 -m "Versión cos documentos coa última versión" # Etiquetamos este estado con R3
+git remote add origin http://github.com/guilleusc/ENSO_P6_individual.git # Agregar un repositorio remoto de Github que chamamos "origin" ao local
+git push --tags origin master # Facemos push, é decir, actualizamos o repositorio remoto de Github co noso repositorio local
+
+# As seguintes tres líneas son escritas neste arquivo antes de ser executadas para ter no repositorio local este arquivo actualizado
 git add historia.txt
 git commit -m "Actualizar historia.txt"
-git push origin master
+git push origin master # Actualizamos o repositorio remoto co local (só cambiamos o arquivo historia.txt)
+
+
+git pull origin master # Actualizamos o repositorio local co que hai no repositorio remoto
+git diff historia.txt # Comprobamos as diferencias entre este arquivo que está sendo modificado no Working Directory e o mismo arquivo que hai no repositorio local
+
+# Os seguintes comandos escríbense neste arquivo antes de ser executados, para así recoller completamente todos os comandos git empregados
+git add historia.txt
+git commit -m "Último commit para facer un último push logo ao repositorio remoto"
+git push origin master 
 
 
