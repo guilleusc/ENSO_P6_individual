@@ -1,4 +1,22 @@
 ##### Comandos relacionados con git #####
 git init
+git add .
+git commit -m "Primeira confirmación: preparación práctica"
+git log
+git tag -a R1 -m "Estado inicial"
+git branch Mejoras 
+git switch Mejoras
+git branch
+git add .
+git commit -m "Engadir arquivo de propostas na rama Mejoras; Modificar el documento word"
+git switch master
+git branch
+git merge Mejoras
+git branch -d Mejoras
+git add . 
+git commit -m "Borrar documento pdf cas propostas de mellora"
+git tag -a R2 -m "Versión coa rama Mejoras fusionada e pdf eliminado"
+git log
+
 
 
