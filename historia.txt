@@ -1,0 +1,4 @@
+##### Comandos relacionados con git #####
+git init
+
+
