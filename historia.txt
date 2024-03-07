@@ -17,6 +17,10 @@ git add .
 git commit -m "Borrar documento pdf cas propostas de mellora"
 git tag -a R2 -m "Versión coa rama Mejoras fusionada e pdf eliminado"
 git log
-
+git revert HEAD 
+git add .
+git commit -m "Volver a actualizar de versión 2 a 3 e meter plantillas actualizadas"
+git add historia.txt
+git commit -m "Actualizar no repositorio o arquivo historia.txt"
 
 
