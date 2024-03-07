@@ -22,5 +22,11 @@ git add .
 git commit -m "Volver a actualizar de versión 2 a 3 e meter plantillas actualizadas"
 git add historia.txt
 git commit -m "Actualizar no repositorio o arquivo historia.txt"
+git tag -a R3 -m "Versión cos documentos coa última versión"
+git remote add origin http://github.com/guilleusc/ENSO_P6_individual.git
+git push --tags origin master
+git add historia.txt
+git commit -m "Actualizar historia.txt"
+git push origin master
 
 
